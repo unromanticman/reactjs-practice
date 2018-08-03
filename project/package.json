@@ -2,6 +2,10 @@
   "name": "project",
   "version": "0.1.0",
   "private": true,
+  "devDependencies": {
+    "cross-env": "^5.1.4",
+    "react-scripts": "1.1.1"
+  },
   "dependencies": {
     "history": "^4.7.2",
     "prop-types": "^15.6.2",
@@ -19,9 +23,9 @@
     "superagent-promise": "^1.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "cross-env react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "cross-env react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
 }
