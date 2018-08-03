@@ -1,13 +1,10 @@
 import React from 'react';
-import agent from '../../agent';
 import { connect } from 'react-redux';
 import {
   HOME_PAGE_LOADED,
   HOME_PAGE_UNLOADED,
   APPLY_TAG_FILTER
 } from '../../constants/actionTypes';
-
-const Promise = global.Promise;
 
 const mapStateToProps = state => ({
   ...state.home,
@@ -26,21 +23,13 @@ const mapDispatchToProps = dispatch => ({
 
 class Home extends React.Component {
   componentWillMount() {
-    const tab = this.props.token ? 'feed' : 'all';
-    const articlesPromise = this.props.token ?
-      agent.Articles.feed :
-      agent.Articles.all;
-    this.props.onLoad(tab, articlesPromise, Promise.all([agent.Tags.getAll(), articlesPromise()]));
   }
-
   componentWillUnmount() {
     this.props.onUnload();
   }
-
   render() {
     return (
       <div className="home-page">
-
          <div className="banner">
             <div className="container">
               <h1 className="logo-font">
