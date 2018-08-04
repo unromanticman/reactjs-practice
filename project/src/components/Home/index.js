@@ -12,20 +12,19 @@ class Home extends React.Component {
         <div className="banner">
           <div className="container">
             <h1 className="logo-font">
-              test
-              </h1>
-            <p>A place to share your knowledge.</p>
+              Project
+            </h1>
           </div>
         </div>
         <div className="container page">
           <div className="row">
-            <div className="col-md-9">
-              <h1>test</h1>
-            </div>
             <div className="col-md-3">
               <div className="sidebar">
-                <p>test</p>
+                側邊欄
               </div>
+            </div>
+            <div className="col-md-9">
+              主文
             </div>
           </div>
         </div>
@@ -33,5 +32,4 @@ class Home extends React.Component {
     );
   }
 }
-
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

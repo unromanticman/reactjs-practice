@@ -32,16 +32,13 @@ class App extends React.Component {
       this.props.onRedirect();
     }
   }
-
   componentWillMount() {
     const token = window.localStorage.getItem('jwt');
     if (token) {
       agent.setToken(token);
     }
-
     this.props.onLoad(token ? agent.Auth.current() : null, token);
   }
-
   render() {
     if (this.props.appLoaded) {
       return (
