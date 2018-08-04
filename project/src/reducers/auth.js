@@ -6,7 +6,6 @@ import {
   ASYNC_START,
   UPDATE_FIELD_AUTH
 } from '../constants/actionTypes';
-
 export default (state = {}, action) => {
   switch (action.type) {
     case LOGIN:
@@ -29,6 +28,5 @@ export default (state = {}, action) => {
     default:
       return state;
   }
-
   return state;
 };

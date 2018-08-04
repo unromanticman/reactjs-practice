@@ -1,41 +1,49 @@
-import superagentPromise from 'superagent-promise';
-import _superagent from 'superagent';
-
-const superagent = superagentPromise(_superagent, global.Promise);
-
+const fetch = require('node-fetch');
 const API_ROOT = 'https://localhost:8080';
-
-const responseBody = res => res.body;
-
 let token = null;
-const tokenPlugin = req => {
-  if (token) {
-    req.set('authorization', `Token ${token}`);
-  }
-}
-
-const requests = {
-  del: url =>
-    superagent.del(`${API_ROOT}${url}`).use(tokenPlugin).then(responseBody),
-  get: url =>
-    superagent.get(`${API_ROOT}${url}`).use(tokenPlugin).then(responseBody),
-  put: (url, body) =>
-    superagent.put(`${API_ROOT}${url}`, body).use(tokenPlugin).then(responseBody),
-  post: (url, body) =>
-    superagent.post(`${API_ROOT}${url}`, body).use(tokenPlugin).then(responseBody)
-};
 
 const Auth = {
   current: () =>
-    requests.get('/user'),
+    fetch(`${API_ROOT}${'/user'}`, {
+      method: 'PUT',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+    })
+  ,
   login: (email, password) =>
-    requests.post('/users/login', { user: { email, password } }),
+    fetch(`${API_ROOT}${'/users/login'}`, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: { user: { email, password } },
+    }),
   register: (username, email, password) =>
-    requests.post('/users', { user: { username, email, password } }),
+    fetch(`${API_ROOT}${'/users/login'}`, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: {
+        user: { username, email, password }
+      },
+    }),
   save: user =>
-    requests.put('/user', { user })
+    fetch(`${API_ROOT}${'/user'}`, {
+      method: 'PUT',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: {
+        user
+      },
+    })
 };
-
 
 export default {
   Auth,
