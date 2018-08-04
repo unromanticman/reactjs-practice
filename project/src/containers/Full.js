@@ -1,12 +1,14 @@
 import agent from '../agent';
-import Header from './Header';
+import Header from '../components/Header/Header';
 import React from 'react';
 import { connect } from 'react-redux';
 import { APP_LOAD, REDIRECT } from '../constants/actionTypes';
 import { Route, Switch } from 'react-router-dom';
-import Home from '../components/Home';
+import Aside from '../components/Aside/Aside';
 import { store } from '../store';
 import { push } from 'react-router-redux';
+
+import Home from '../components/Home/Home';
 
 const mapStateToProps = state => {
   return {
@@ -24,7 +26,7 @@ const mapDispatchToProps = dispatch => ({
     dispatch({ type: REDIRECT })
 });
 
-class App extends React.Component {
+class Full extends React.Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.redirectTo) {
       // this.context.router.replace(nextProps.redirectTo);
@@ -40,23 +42,24 @@ class App extends React.Component {
     this.props.onLoad(token ? agent.Auth.current() : null, token);
   }
   render() {
-    if (this.props.appLoaded) {
-      return (
-        <div>
-          <Header
-            appName={this.props.appName}
-            currentUser={this.props.currentUser} />
-          <Switch>
-            <Route exact path="/" component={Home} />
-          </Switch>
-        </div>
-      );
-    }
     return (
       <div>
         <Header
           appName={this.props.appName}
           currentUser={this.props.currentUser} />
+        <div className="home-page">
+          <div className="row">
+            <div className="col-md-3">
+              <Aside />
+            </div>
+            <div className="col-md-9">
+              <Switch>
+                <Route exact path="/" component={Home} />
+              </Switch>
+            </div>
+          </div>
+        </div>
+
       </div>
     );
   }
@@ -66,4 +69,4 @@ class App extends React.Component {
 //   router: PropTypes.object.isRequired
 // };
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(Full);

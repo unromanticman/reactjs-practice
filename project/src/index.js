@@ -5,12 +5,12 @@ import { store, history} from './store';
 import { Route, Switch } from 'react-router-dom';
 import { ConnectedRouter } from 'react-router-redux';
 import registerServiceWorker from './registerServiceWorker';
-import App from './components/App';
+import Full from './containers/Full';
 ReactDOM.render((
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <Switch>
-        <Route path="/" component={App} />
+        <Route path="/" component={Full} />
       </Switch>
     </ConnectedRouter>
   </Provider>
