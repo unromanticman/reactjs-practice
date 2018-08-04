@@ -1,21 +1,17 @@
 import {
   APP_LOAD,
   REDIRECT,
-  LOGOUT,
   LOGIN,
   REGISTER,
-  HOME_PAGE_UNLOADED,
-  SETTINGS_PAGE_UNLOADED,
+  LOGOUT,
   LOGIN_PAGE_UNLOADED,
   REGISTER_PAGE_UNLOADED
 } from '../constants/actionTypes';
-
 const defaultState = {
   appName: 'Project',
   token: null,
   viewChangeCounter: 0
 };
-
 export default (state = defaultState, action) => {
   switch (action.type) {
     case APP_LOAD:
@@ -37,8 +33,6 @@ export default (state = defaultState, action) => {
         token: action.error ? null : action.payload.user.token,
         currentUser: action.error ? null : action.payload.user
       };
-    case HOME_PAGE_UNLOADED:
-    case SETTINGS_PAGE_UNLOADED:
     case LOGIN_PAGE_UNLOADED:
     case REGISTER_PAGE_UNLOADED:
       return { ...state, viewChangeCounter: state.viewChangeCounter + 1 };
