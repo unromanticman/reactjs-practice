@@ -44,9 +44,7 @@ class Full extends React.Component {
   render() {
     return (
       <div>
-        <Header
-          appName={this.props.appName}
-          currentUser={this.props.currentUser} />
+        <Header/>
         <div className="home-page">
           <div className="row">
             <div className="col-md-3">
