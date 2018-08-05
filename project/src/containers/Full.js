@@ -62,8 +62,4 @@ class Full extends React.Component {
   }
 }
 
-// App.contextTypes = {
-//   router: PropTypes.object.isRequired
-// };
-
 export default connect(mapStateToProps, mapDispatchToProps)(Full);
