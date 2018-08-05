@@ -45,12 +45,12 @@ class Full extends React.Component {
     return (
       <div>
         <Header />
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-3">
               <Aside />
             </div>
-            <div class="col-md-9">
+            <div className="col-md-9">
               <Switch>
                 <Route exact path="/" component={Home} />
               </Switch>

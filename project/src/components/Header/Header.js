@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const LinkView = props => {
   return (
-    <ul class="nav navbar-nav">
-      <li class="active">
+    <ul className="nav navbar-nav">
+      <li className="active">
         <Link to="/">
           Home
         </Link>
@@ -18,17 +18,17 @@ class Header extends React.Component {
   }
   render() {
     return (
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
+      <nav className="navbar navbar-default">
+        <div className="container-fluid">
+          <div className="navbar-header">
+            <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">WebSiteName</a>
+            <a className="navbar-brand" href="#">WebSiteName</a>
           </div>
-          <div class="collapse navbar-collapse" id="myNavbar">
+          <div className="collapse navbar-collapse" id="myNavbar">
             <LinkView />
           </div>
         </div>
