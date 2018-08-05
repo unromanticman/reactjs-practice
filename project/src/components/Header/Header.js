@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 const LinkView = props => {
   return (
-    <ul className="nav navbar-nav pull-xs-right">
-      <li className="nav-item">
-        <Link to="/" className="nav-link">
+    <ul class="nav navbar-nav">
+      <li class="active">
+        <Link to="/">
           Home
         </Link>
       </li>
@@ -13,18 +13,28 @@ const LinkView = props => {
   );
 };
 class Header extends React.Component {
+  handleClick = () => {
+    console.log('Click happened');
+  }
   render() {
     return (
-      <div>
-        <nav className="navbar navbar-light">
-          <div className="container">
-            <Link to="/" className="navbar-brand">
-              Home
-            </Link>
+
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">WebSiteName</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
             <LinkView />
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
+
     );
   }
 }

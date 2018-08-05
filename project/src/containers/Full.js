@@ -44,20 +44,19 @@ class Full extends React.Component {
   render() {
     return (
       <div>
-        <Header/>
-        <div className="home-page">
-          <div className="row">
-            <div className="col-md-3">
+        <Header />
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
               <Aside />
             </div>
-            <div className="col-md-9">
+            <div class="col-md-9">
               <Switch>
                 <Route exact path="/" component={Home} />
               </Switch>
             </div>
           </div>
         </div>
-
       </div>
     );
   }
