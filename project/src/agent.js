@@ -1,5 +1,6 @@
 const fetch = require('node-fetch');
 const API_ROOT = 'https://localhost:8080';
+let token = null;
 
 const Test = {
   getTestData: () =>
@@ -12,5 +13,7 @@ const Test = {
 }
 
 export default {
-  Test
+  Test,
+  setToken: _token => { token = _token; },
+  getToken: () => { return token }
 };

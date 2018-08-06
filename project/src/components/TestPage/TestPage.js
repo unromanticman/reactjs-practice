@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import agent from './../../agent';
 import { SET_TESTDATA, CLEAN_TESTDATA } from './../../constants/actionTypes';
 import MovieList from './MovieList';
+import Loginout from './Loginout';
+
 const mapStateToProps = state => ({
   ...state,
   testdata: state.testpage.testdata,
@@ -76,6 +78,10 @@ class TestPage extends React.Component {
           <MovieList data={this.props.testdata} />
           <button onClick={this.cleandata}>清空資料</button>
           <button onClick={this.reloaddata}>重新載入資料</button>
+        </div>
+        <br />
+        <div>
+          <Loginout />
         </div>
       </div>
     );
