@@ -1,4 +1,3 @@
-import agent from '../agent';
 import Header from '../components/Header/Header';
 import React from 'react';
 import { connect } from 'react-redux';
@@ -14,7 +13,6 @@ const mapStateToProps = state => {
   return {
     appLoaded: state.common.appLoaded,
     appName: state.common.appName,
-    currentUser: state.common.currentUser,
     redirectTo: state.common.redirectTo
   }
 };
@@ -35,11 +33,6 @@ class Full extends React.Component {
     }
   }
   componentWillMount() {
-    const token = window.localStorage.getItem('jwt');
-    if (token) {
-      agent.setToken(token);
-    }
-    this.props.onLoad(token ? agent.Auth.current() : null, token);
   }
   render() {
     return (

@@ -1,0 +1,5 @@
+{//縮排兩空白
+  "editor.tabSize": 2,
+  //貼上自動排版
+  "editor.formatOnPaste": true,
+}
