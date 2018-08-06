@@ -8,6 +8,7 @@ import { store } from '../store';
 import { push } from 'react-router-redux';
 
 import Home from '../components/Home/Home';
+import TestPage from '../components/TestPage/TestPage';
 
 const mapStateToProps = state => {
   return {
@@ -46,6 +47,7 @@ class Full extends React.Component {
             <div className="col-md-9">
               <Switch>
                 <Route exact path="/" component={Home} />
+                <Route path="/testPage" component={TestPage} />
               </Switch>
             </div>
           </div>
