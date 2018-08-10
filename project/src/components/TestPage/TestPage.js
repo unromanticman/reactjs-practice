@@ -4,6 +4,7 @@ import agent from './../../agent';
 import { SET_TESTDATA, CLEAN_TESTDATA } from './../../constants/actionTypes';
 import MovieList from './MovieList';
 import Loginout from './Loginout';
+import BackgroundTest from './BackgroundTest';
 
 const mapStateToProps = state => ({
   ...state,
@@ -83,6 +84,8 @@ class TestPage extends React.Component {
         <div>
           <Loginout />
         </div>
+        測試SCSS/SASS
+        <BackgroundTest/>
       </div>
     );
   }

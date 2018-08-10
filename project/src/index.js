@@ -6,6 +6,7 @@ import { Route, Switch } from 'react-router-dom';
 import { ConnectedRouter } from 'react-router-redux';
 import registerServiceWorker from './registerServiceWorker';
 import Full from './containers/Full';
+import './scss/style.scss'
 ReactDOM.render((
   <Provider store={store}>
     <ConnectedRouter history={history}>
