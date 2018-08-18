@@ -4,6 +4,8 @@ import agent from './../../agent';
 import { SET_TESTDATA, CLEAN_TESTDATA } from './../../constants/actionTypes';
 import MovieList from './MovieList';
 import Loginout from './Loginout';
+import RecomposeTest from './RecomposeTest';
+import RecomposeTestLogic from './RecomposeTestLogic';
 
 const mapStateToProps = state => ({
   ...state,
@@ -82,6 +84,18 @@ class TestPage extends React.Component {
         <br />
         <div>
           <Loginout />
+        </div>
+        <div>
+          <br />
+          <div>
+            recompose寫在一起的寫法
+          </div>
+          <RecomposeTest />
+          <br />
+          <div>
+            recompose拆分邏輯與JSX的寫法
+          </div>
+          <RecomposeTestLogic />
         </div>
       </div>
     );
