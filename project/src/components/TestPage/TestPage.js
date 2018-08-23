@@ -96,7 +96,7 @@ class TestPage extends React.Component {
             recompose拆分邏輯與JSX的寫法
           </div>
           <RecomposeTestLogic />
-        </div>
+        </div>       
       </div>
     );
   }

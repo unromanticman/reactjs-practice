@@ -9,6 +9,7 @@ import { push } from 'react-router-redux';
 
 import Home from '../components/Home/Home';
 import TestPage from '../components/TestPage/TestPage';
+import GearingSelect from '../components/GearingSelect/GearingSelect';
 
 const mapStateToProps = state => {
   return {
@@ -48,6 +49,8 @@ class Full extends React.Component {
               <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/testPage" component={TestPage} />
+                <Route path="/gearingSelect" component={GearingSelect} />
+
               </Switch>
             </div>
           </div>

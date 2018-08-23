@@ -14,6 +14,11 @@ const LinkView = props => {
           TestPage
         </Link>
       </li>
+      <li>
+        <Link to="/gearingSelect">
+          GearingSelect
+        </Link>
+      </li>
     </ul>
   );
 };
