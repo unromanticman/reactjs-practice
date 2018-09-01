@@ -20,6 +20,7 @@ const mapDispatchToProps = dispatch => ({
 
 class TestPage extends React.Component {
   componentDidMount() {
+    console.log('載入本頁資料');
     agent.Test.getTestData()
       .then((response) => response.json())
       .then((responseJson) => {
@@ -97,6 +98,9 @@ class TestPage extends React.Component {
           </div>
           <RecomposeTestLogic />
         </div>
+        <h1>頁面重整作法</h1>
+        重新呼叫componentDidMount
+        <button onClick={()=>this.componentDidMount()}>重新整理</button>
       </div>
     );
   }
