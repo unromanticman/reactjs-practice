@@ -14,6 +14,11 @@ const LinkView = props => {
           TestPage
         </Link>
       </li>
+      <li>
+        <Link to="/formPage">
+          表單防呆
+        </Link>
+      </li>
     </ul>
   );
 };
