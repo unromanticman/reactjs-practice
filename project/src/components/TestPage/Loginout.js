@@ -6,9 +6,9 @@ const mapStateToProps = state => ({
 });
 const mapDispatchToProps = dispatch => ({
   login: token =>
-    dispatch({ type: LOGIN, payload: { user: { token: token } } }),
+    dispatch({ type: LOGIN, payload: { reducer: 'auth', user: { token: token } } }),
   logout: () =>
-    dispatch({ type: LOGOUT, payload: {} }),
+    dispatch({ type: LOGOUT, payload: { reducer: 'auth' } }),
 });
 
 class Loginout extends React.Component {

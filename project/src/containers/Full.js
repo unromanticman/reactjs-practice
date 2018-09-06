@@ -21,9 +21,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
   onLoad: (payload, token) =>
-    dispatch({ type: APP_LOAD, payload, token, skipTracking: true }),
+    dispatch({ type: APP_LOAD, payload: { reducer: 'common' }, token, skipTracking: true }),
   onRedirect: () =>
-    dispatch({ type: REDIRECT })
+    dispatch({ type: REDIRECT, payload: { reducer: 'common' }})
 });
 
 class Full extends React.Component {

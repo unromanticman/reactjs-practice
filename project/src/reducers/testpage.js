@@ -5,19 +5,24 @@ import {
 const defaultState = {
   testdata: []
 };
-export default (state = defaultState, action) => {
-  switch (action.type) {
-    case SET_TESTDATA:
-      return {
-        ...state,
-        testdata: action.payload.data
-      };
-    case CLEAN_TESTDATA:
-      return {
-        ...state,
-        testdata: []
-      };
-    default:
-      return state;
+export default (state = defaultState, { type = "", payload = { reducer: "" } }) => {
+  if (payload.reducer === "testPage") {
+    switch (type) {
+      case SET_TESTDATA:
+        return {
+          ...state,
+          testdata: payload.data
+        };
+      case CLEAN_TESTDATA:
+        return {
+          ...state,
+          testdata: []
+        };
+      default:
+        return state;
+    }
+  }
+  else {
+    return state;
   }
 };
