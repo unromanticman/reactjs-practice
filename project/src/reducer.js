@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 import common from './reducers/common';
 import { routerReducer } from 'react-router-redux';
-import testpage from './reducers/testpage';
+import testPage from './reducers/testPage';
 import auth from './reducers/auth';
 
 export default combineReducers({
   common,
-  testpage,
+  testPage,
   auth,
   router: routerReducer
 });

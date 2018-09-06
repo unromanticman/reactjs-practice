@@ -9,13 +9,13 @@ import RecomposeTestLogic from './RecomposeTestLogic';
 
 const mapStateToProps = state => ({
   ...state,
-  testdata: state.testpage.testdata,
+  testdata: state.testPage.testdata,
 });
 const mapDispatchToProps = dispatch => ({
   setTestData: testdata =>
-    dispatch({ type: SET_TESTDATA, payload: { data: testdata } }),
+    dispatch({ type: SET_TESTDATA, payload: { reducer: 'testPage', data: testdata } }),
   cleanTestData: () =>
-    dispatch({ type: CLEAN_TESTDATA, payload: {} }),
+    dispatch({ type: CLEAN_TESTDATA, payload: { reducer: 'testPage' } }),
 });
 
 class TestPage extends React.Component {
