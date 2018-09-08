@@ -19,6 +19,11 @@ const LinkView = props => {
           表單防呆
         </Link>
       </li>
+      <li>
+        <Link to="/CustomComponentPage">
+          可重複利用的component練習
+        </Link>
+      </li>      
     </ul>
   );
 };

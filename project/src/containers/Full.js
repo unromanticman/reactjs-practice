@@ -10,6 +10,7 @@ import { push } from 'react-router-redux';
 import Home from '../components/Home/Home';
 import TestPage from '../components/TestPage/TestPage';
 import FormPage from '../components/TestPage/FormPage';
+import CustomComponentPage from '../components/TestPage/CustomComponentPage';
 
 const mapStateToProps = state => {
   return {
@@ -50,6 +51,8 @@ class Full extends React.Component {
                 <Route exact path="/" component={Home} />
                 <Route path="/testPage" component={TestPage} />
                 <Route path="/formPage" component={FormPage} />
+                <Route path="/CustomComponentPage" component={CustomComponentPage} />
+
               </Switch>
             </div>
           </div>
