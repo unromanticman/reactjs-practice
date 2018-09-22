@@ -6,11 +6,12 @@ import { Route, Switch } from 'react-router-dom';
 import Aside from '../components/Aside/Aside';
 import { store } from '../store';
 import { push } from 'react-router-redux';
-
+import './../style/style.css'; 
 import Home from '../components/Home/Home';
 import TestPage from '../components/TestPage/TestPage';
 import FormPage from '../components/TestPage/FormPage';
 import CustomComponentPage from '../components/TestPage/CustomComponentPage';
+import SassPage from '../components/TestPage/SassPage';
 
 const mapStateToProps = state => {
   return {
@@ -52,7 +53,7 @@ class Full extends React.Component {
                 <Route path="/testPage" component={TestPage} />
                 <Route path="/formPage" component={FormPage} />
                 <Route path="/CustomComponentPage" component={CustomComponentPage} />
-
+                <Route path="/SassPage" component={SassPage} />
               </Switch>
             </div>
           </div>

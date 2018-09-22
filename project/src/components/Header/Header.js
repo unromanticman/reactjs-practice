@@ -23,7 +23,12 @@ const LinkView = props => {
         <Link to="/CustomComponentPage">
           可重複利用的component練習
         </Link>
-      </li>      
+      </li>    
+      <li>
+        <Link to="/SassPage">
+          Sass與Scss整合
+        </Link>
+      </li>     
     </ul>
   );
 };
