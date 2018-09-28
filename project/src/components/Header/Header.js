@@ -34,6 +34,11 @@ const LinkView = props => {
           異步數據Promise處理
         </Link>
       </li>
+      <li>
+        <Link to="/PropTypeRestrict">
+          型別限制
+        </Link>
+      </li>
     </ul>
   );
 };

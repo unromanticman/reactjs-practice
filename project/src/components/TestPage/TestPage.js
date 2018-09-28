@@ -6,7 +6,6 @@ import MovieList from './MovieList';
 import Loginout from './Loginout';
 import RecomposeTest from './RecomposeTest';
 import RecomposeTestLogic from './RecomposeTestLogic';
-
 const mapStateToProps = state => ({
   ...state,
   testdata: state.testPage.testdata,

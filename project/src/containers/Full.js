@@ -13,7 +13,7 @@ import FormPage from '../components/TestPage/FormPage';
 import CustomComponentPage from '../components/TestPage/CustomComponentPage';
 import SassPage from '../components/TestPage/SassPage';
 import PromiseLearn from '../components/TestPage/PromiseLearn';
-
+import PropTypeRestrict from '../components/TestPage/PropTypeRestrict';
 const mapStateToProps = state => {
   return {
     appLoaded: state.common.appLoaded,
@@ -56,6 +56,7 @@ class Full extends React.Component {
                 <Route path="/CustomComponentPage" component={CustomComponentPage} />
                 <Route path="/SassPage" component={SassPage} />
                 <Route path="/PromiseLearn" component={PromiseLearn} />
+                <Route path="/PropTypeRestrict" component={PropTypeRestrict} />                
               </Switch>
             </div>
           </div>

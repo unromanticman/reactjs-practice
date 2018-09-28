@@ -1,9 +1,16 @@
 import React from 'react';
 import agent from '../../agent';
+import Button from './CCC';
 
 const TEST_URL = 'https://facebook.github.io/react-native/movies.json';
 
 class PromiseLearn extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      c: 123
+    }
+  }
   loadingAll() {
     // 一次載入全部資料
     Promise.all([
@@ -15,6 +22,10 @@ class PromiseLearn extends React.Component {
       }).then(response => response.json())
         .then(responseJson => {
           console.log('1');
+          this.setState({
+            c: 30
+          })
+
         }).catch((error) => { //使用catch避免請求失敗終止Promise.all
           console.error(error);
         }),
@@ -83,9 +94,10 @@ class PromiseLearn extends React.Component {
 
   render() {
     return <div>
-      <p>請打開console.log搭配專案程式碼查看！<br/>
-      一定要專案程式碼 因為檢查原始碼只看的到壓縮後的Code！</p>
+      <p>請打開console.log搭配專案程式碼查看！<br />
+        一定要專案程式碼 因為檢查原始碼只看的到壓縮後的Code！</p>
       <div>
+        <Button name={"3"} onClick={ev => console.log('test')}>{this.state.c}</Button>
         <h3>不照順序載入資料</h3>
         <p>點擊F12查看console會發現資料是<span style={{ color: 'red' }}>不照順序</span>載入的</p>
         <button onClick={ev => this.loadingAll()}>不照順序載入資料</button>
