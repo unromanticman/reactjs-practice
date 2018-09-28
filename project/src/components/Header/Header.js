@@ -29,6 +29,11 @@ const LinkView = props => {
           Sass與Scss整合
         </Link>
       </li>     
+      <li>
+        <Link to="/PromiseLearn">
+          異步數據Promise處理
+        </Link>
+      </li>
     </ul>
   );
 };

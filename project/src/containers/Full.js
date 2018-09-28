@@ -12,6 +12,7 @@ import TestPage from '../components/TestPage/TestPage';
 import FormPage from '../components/TestPage/FormPage';
 import CustomComponentPage from '../components/TestPage/CustomComponentPage';
 import SassPage from '../components/TestPage/SassPage';
+import PromiseLearn from '../components/TestPage/PromiseLearn';
 
 const mapStateToProps = state => {
   return {
@@ -54,6 +55,7 @@ class Full extends React.Component {
                 <Route path="/formPage" component={FormPage} />
                 <Route path="/CustomComponentPage" component={CustomComponentPage} />
                 <Route path="/SassPage" component={SassPage} />
+                <Route path="/PromiseLearn" component={PromiseLearn} />
               </Switch>
             </div>
           </div>
