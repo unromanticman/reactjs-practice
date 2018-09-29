@@ -6,6 +6,7 @@ import { Route, Switch } from 'react-router-dom';
 import Aside from '../components/Aside/Aside';
 import { store } from '../store';
 import { push } from 'react-router-redux';
+import { Helmet } from "react-helmet";
 
 import Home from '../components/Home/Home';
 import TestPage from '../components/TestPage/TestPage';
@@ -43,6 +44,10 @@ class Full extends React.Component {
   render() {
     return (
       <div>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>標題測試</title>
+        </Helmet>
         <Header />
         <div className="container">
           <div className="row">
