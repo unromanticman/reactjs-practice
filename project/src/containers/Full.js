@@ -42,6 +42,7 @@ class Full extends React.Component {
   componentWillMount() {
   }
   render() {
+    const jwt = localStorage.getItem('jwt');
     return (
       <div>
         <Helmet>
@@ -55,11 +56,10 @@ class Full extends React.Component {
               <Aside />
             </div>
             <div className="col-md-9">
-              <Switch>
+              <Switch>  
                 <Route exact path="/" component={Home} />
                 <Route path="/testPage" component={TestPage} />
                 <Route path="/formPage" component={FormPage} />
-                <Route path="/CustomComponentPage" component={CustomComponentPage} />
                 <Route path="/PromiseLearn" component={PromiseLearn} />
                 <Route path="/SassScssPage" component={SassScssPage} />
               </Switch>

@@ -12,7 +12,9 @@ const mapDispatchToProps = dispatch => ({
 });
 
 class Loginout extends React.Component {
+ 
   render() {
+  
     return (
       <div>
         <div>
