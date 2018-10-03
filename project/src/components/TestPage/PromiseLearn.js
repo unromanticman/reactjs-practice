@@ -1,31 +1,8 @@
 import React from 'react';
 import agent from '../../agent';
-import DynamicTabel from './DynamicTable/DynamicTabel';
 
 const TEST_URL = 'https://facebook.github.io/react-native/movies.json';
-const theadData = [
-  '名稱',
-  '類別',
-  '管理'
-];
 
-const rowData = [
-  {
-    id: 1,
-    name: "123",
-    manage: "編輯"
-  },
-  {
-    id: 2,
-    name: "456",
-    manage: "編輯"
-  },
-  {
-    id: 3,
-    name: "789",
-    manage: "編輯"
-  }
-];
 
 class PromiseLearn extends React.Component {
   loadingAll() {
@@ -107,11 +84,7 @@ class PromiseLearn extends React.Component {
 
   render() {
     return <div>
-      <DynamicTabel
-        theadData={theadData}
-        rowData={rowData}
-        tableClassName={'table table-condensed'}
-      />
+
       <p>請打開console.log搭配專案程式碼查看！<br />
         一定要專案程式碼 因為檢查原始碼只看的到壓縮後的Code！</p>
       <div>

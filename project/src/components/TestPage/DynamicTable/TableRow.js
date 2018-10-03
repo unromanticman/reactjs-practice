@@ -4,19 +4,19 @@ import TableRowCell from './TableRowCell'
 
 // prop-types限制元件屬性
 const propTypes = {
-  rowData: PropTypes.array, // 列內容陣列
+  data: PropTypes.array, // 列內容陣列
 }
 
 // 元件預設屬性
 const defaultProps = {
-  rowData: [],
+  data: [],
 }
 
 // 表格內容
-const TableRow = ({ rowData, trClassName, tdClassName, trStyle, tdStyle }) =>
-  rowData.map((item, index) =>
-    <tr key={index} className={trClassName} style={trStyle}>
-      <TableRowCell tableDataCell={item} tdClassName={tdClassName} tdStyle={tdStyle} />
+const TableRow = ({ data, className, style }) =>
+  data.map((item, index) =>
+    <tr style={style} className={className} key={index}>
+      <TableRowCell tableDataCell={item} />
     </tr>
   )
 

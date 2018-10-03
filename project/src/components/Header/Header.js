@@ -34,6 +34,11 @@ const LinkView = props => {
           Sass與Scss整合
         </Link>
       </li>
+      <li>
+        <Link to="/TableTest">
+          動態Table
+        </Link>
+      </li>
     </ul>
   );
 };
